@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script
+            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="root">
+
+        </div>
+        <div id="imgs"></div>
+        <script type="text/babel">
+        var href = <h1>welcome to JSX</h1>
+
+        var arr = ['Iphone','Play Station 5', 'Samsung']
+
+
+        ReactDOM.render(href, document.getElementById('root'))
+        function UI() {
+            var kk = (<div>
+                <h1>function render</h1>
+                <ul>
+                    <li>{arr[0]}</li>
+                    <li>{arr[1]}</li>
+                    <li>{arr[2]}</li></ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam accusantium repellat incidunt possimus at pariatur sed soluta quo esse fugiat, quia qui maiores reiciendis libero! Veniam veritatis neque aspernatur vel?</p>
+            </div>)
+
+            return kk
+        }
+        // UI()
+        function reUse(){
+            return <div>{ UI() }</div>
+        }
+        function App() {
+            ReactDOM.render(reUse(), document.getElementById('imgs'))
+        }
+        App()
+
+    </script>
+    </body>
+
+</html>
