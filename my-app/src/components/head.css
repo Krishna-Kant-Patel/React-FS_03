@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: bisque;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(12, 14, 13);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    padding: 15px;
+    justify-content:flex-end;
+}
+.menu{
+    border-radius: 0 50% 0 50%;
+    color: salmon;
+    height: 70%;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.menu:hover{
+    background-color: antiquewhite;
+}
+.card{
+    width: 30%;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 2px 5px 5px red;
+}
