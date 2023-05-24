@@ -1,14 +1,17 @@
 
 import './App.css';
-import Home from './components/Header';
+import Images from './components/Image';
 import Propcomp from './components/card';
+import Count from './components/count';
 
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      
       <Propcomp name="krishna" gender= "male"/>
+      <Count/>
+      <Images/>
       
     </div>
   );
