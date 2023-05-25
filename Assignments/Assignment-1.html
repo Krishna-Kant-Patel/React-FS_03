@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script
+            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <title>Document</title>
+        <style>
+            body{
+                padding: 15px;
+                margin-left: 25%;
+                margin-top: 8%;
+                height: 50vh;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+           
+
+        </div>
+        <div id="A" style="font-size: 19px;"></div>
+        <div id="B" style="font-size: 19px;"></div>
+        <div id="C" style="font-size: 19px;"> </div>
+        
+        <script>
+            var heading = React.createElement('h1', null, 'Learn Web development')
+            var  kr = React.createElement('p', null, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum voluptas iure dolorem aspernatur cum, libero voluptatibus culpa, consequatur, quisquam ipsum exercitationem? Quod totam hic assumenda tenetur! Laboriosam, ab qui?')
+            var  B = React.createElement('p', null, 'Lorem ipsum dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos adipisci, ipsum dolorum modi cum quo ad facilis ratione? adipisicing elit. Minus voluptatum voluptas iure dolorem aspernatur cum, libero voluptatibus culpa, consequatur, quisquam ipsum exercitationem? Quod totam hic assumenda tenetur! Laboriosam, ab qui?')
+            var  C = React.createElement('p', null, 'Lorem ipsum dolor sit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos adipisci, ipsum dolorum modi cum quo ad facilis ratione? amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos adipisci, ipsum dolorum modi cum quo ad facilis ratione? adipisicing elit. Minus voluptatum voluptas iure dolorem aspernatur cum, libero voluptatibus culpa, consequatur, quisquam ipsum exercitationem? Quod totam hic assumenda tenetur! Laboriosam, ab qui?')
+    
+    
+         ReactDOM.render(heading, document.getElementById('root'))
+          
+          
+            ReactDOM.render(kr, document.getElementById('A'))
+            ReactDOM.render(B, document.getElementById('B'))
+            ReactDOM.render(C, document.getElementById('C'))
+
+          
+        </script>
+    </body>
+</html>
