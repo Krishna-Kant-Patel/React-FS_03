@@ -16,7 +16,7 @@ body{
     gap: 25px;
     align-items: center;
     padding: 15px;
-    justify-content:flex-end;
+    justify-content:space-around;
 }
 .menu{
     border-radius: 0 50% 0 50%;
@@ -71,15 +71,26 @@ button{
     align-items: center;
     justify-content: center;
 }
+.kk{
+    display: flex;
+}
+.heading{
+    color: green;
+    float: left;
+    margin-left: -20%;
+}
 .btn{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 .container{
-    margin-left: 20%;
-    width: 60%;
+    width: 20%;
     height: 350px;
     border-radius: 25px;
     box-shadow: 2px 5px 5px rgb(14, 12, 12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
