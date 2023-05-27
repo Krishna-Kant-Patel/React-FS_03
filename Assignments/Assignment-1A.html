@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="https://reactjs.org/link/switch-to-createroot"></script>
+</head>
+<body>
+    <div id="Heading"></div>
+    <hr>
+    <div id="B"></div>
+    <hr>
+    <div id="C"></div>
+    <hr>
+    <div id="D"></div>
+    <hr>
+    <div id="E"></div>
+    <script>
+
+        var As = React.createElement('div', null, [
+            React.createElement('h1',null,'Krishna Singh'),
+            React.createElement('p',null,'Software Developer, Math Teacher'),
+            React.createElement('a',{href:'#'},'Github '),   
+            React.createElement('a',{href:'#'},' Linkedin')   
+    
+    ])
+        var Second = React.createElement('div', null, [
+            React.createElement('h1',null,'Experience'),
+            React.createElement('h2',null,'Software developer at Amazon'),
+            React.createElement('p',null,'I work with amazon in transportation team, some more description Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, ullam! Maxime officiis consequuntur libero eaque reprehenderit quisquam nam ab vitae totam id commodi laborum enim, sint ea odit quasi soluta!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident iusto ut praesentium modi. Incidunt atque voluptatem, dignissimos officiis reprehenderit est!')
+    
+    ])
+        var Third = React.createElement('div', null, [
+            React.createElement('h2',null,'Educator at Geekster'),
+            React.createElement('p',null,'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora cum inventore aliquam, nulla eos dignissimos ipsum voluptas id, dolores suscipit totam nostrum perferendis alias, expedita quaerat distinctio asperiores! Nobis, aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsa ab qui autem nesciunt vel consequatur non totam, temporibus excepturi voluptatem iure impedit ut repellendus earum necessitatibus nemo eligendi, animi debitis reiciendis suscipit. Unde iure obcaecati dolores, numquam quibusdam rerum facilis a quam quos ad ullam consectetur reiciendis deserunt similique.')
+    ])
+        var Skills = React.createElement('div', null, [
+            React.createElement('h2',null,'Skill'),
+            React.createElement('ul',null,[
+                React.createElement("li", null, 'Java'),
+                React.createElement("li", null, 'JavaScript'),
+                React.createElement("li", null, 'Python'),
+                React.createElement("li", null, 'Django'),
+                React.createElement("li", null, 'SQL'),
+            ])
+        ])
+        var Hobbies = React.createElement('div', null, [
+            React.createElement('h2',null,'Hobbies'),
+            React.createElement('ul',null,[
+                React.createElement("li", null, 'Cricket'),
+                React.createElement("li", null, 'Playing Guitar'),
+                React.createElement("li", null, 'Chess'),
+                React.createElement("li", null, 'Teaching')
+            ])
+        ])
+
+        ReactDOM.render(As, document.getElementById('Heading'))
+        ReactDOM.render(Second, document.getElementById('B'))
+        ReactDOM.render(Third, document.getElementById('C'))
+        ReactDOM.render(Skills, document.getElementById('D'))
+        ReactDOM.render(Hobbies, document.getElementById('E'))
+    </script>
+</body>
+</html>
