@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <style>
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #container{
+                margin-top: 5%;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 3px 4px 5px black;
+                width: 450px;
+                height: 500px;
+                background-color: whitesmoke;
+                text-align: center;
+            }
+            #Img{
+                height: 50%;
+                width: 100%;
+                border-radius: 15px 15px  0 0;
+                background-image: url(data:image/png;base64,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);
+                background-size: cover;
+            }
+            #follower{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
+        </style>
+</head>
+<body>
+
+    
+</body>
+
+<script>
+    var card = React.createElement('div',{id:'container'}, [
+        React.createElement('div', {id:'Img'},''),
+        React.createElement('div', {id:'Info'},[
+            React.createElement('h1',null, 'Krishna Sing'),
+            React.createElement('p',null, 'Full Stack Developer')
+        ]),
+        React.createElement('div', {id:'follower'},[
+            React.createElement('div', null, [
+            React.createElement('h1',null, '36'),
+            React.createElement('p',null, 'Shoot')
+            ]),
+            React.createElement('div', null, [
+            React.createElement('h1',null, '86'),
+            React.createElement('p',null, 'Following')
+            ]),
+            React.createElement('div', null, [
+            React.createElement('h1',null, '200'),
+            React.createElement('p',null, 'Followers')
+            ]),
+        ])
+
+    ])
+    ReactDOM.render(card, document.body)
+</script>
+</html>
