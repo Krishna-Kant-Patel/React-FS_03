@@ -9,7 +9,7 @@ function Count(){
     setState(count-1)
  }
     return <>
-        <div className="count">
+        <div className="count" style={{backgroundColor : 'whitesmoke'}}>
             <button onClick={inc}>increament</button>
             <h2>Count: {count}</h2>
             <button onClick={dcs}>decrease</button>
