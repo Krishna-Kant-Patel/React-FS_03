@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://cdn.wallpapersafari.com/49/53/C3Rs4G.jpg);
+    background-size: cover;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(12, 14, 13);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    padding: 15px;
+    justify-content:space-between;
+}
+.Logo{
+    margin-left: 15px;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+    border-radius: 0 50% 0 50%;
+    color: salmon;
+    height: 70%;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.menu:hover{
+    background-color: antiquewhite;
+}
+.card{
+    width: 30%;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 2px 5px 5px red;
+}
+
+
+.kk{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.heading{
+    color: green;
+    float: left;
+    margin-left: -20%;
+}
+.Home{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 45px;
+    color: rgb(39, 23, 23);
+}
+.footers{
+    position: fixed;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
