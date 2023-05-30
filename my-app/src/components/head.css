@@ -94,3 +94,25 @@ button{
     align-items: center;
     justify-content: space-evenly;
 }
+input{
+    border: none;
+    width: 80%;
+    height: 40px;
+    padding: 15px;
+}
+
+.complete{
+    text-decoration: line-through;
+    text-decoration-color: navy;
+  
+}
+.item{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      color:white;
+   
+}  
+p{
+    font-family: cursive;
+}

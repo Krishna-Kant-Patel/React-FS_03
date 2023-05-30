@@ -3,15 +3,10 @@ import './head.css'
 function Inc(){
  let [str, setState] = useState()
  
- const dcs = () =>{
-    let st = document.getElementById('kk').value
-    setState(st)
- }
+
     return <>
-        <div className="count" style={{backgroundColor : 'whitesmoke'}}>
-            <input id="kk" type="text" onChange={(event)=>{
-                
-            }}/> 
+        <div className="container" style={{backgroundColor : 'whitesmoke'}}>
+            <input id="kk" type="text" onChange={(event)=>{setState(event.target.value)}}/> 
             <p>{str}</p>
 
         </div>
