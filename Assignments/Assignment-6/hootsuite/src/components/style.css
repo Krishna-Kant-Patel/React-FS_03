@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Nav-bar{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+.logo{
+    height: 100%;
+    width: 100px;
+}
+.right{
+    width: 30%;
+
+}
+.left{
+    width: 50%;
+}
+
+.left , .right{
+    height: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.left-bar, .right-bar{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.right-bar{
+    font-size: 20px;
+    color: gray;
+}
+.btn{
+    background-color: green;
+    height: 45px;
+    width: 100px;
+    border: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.container{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(25,50,91);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.heading{
+    font-weight: bold;
+    font-size: 60px;
+}
+.sub{
+    font-size: 20px;
+}
+
+.demo{
+    height: 60px;
+    width: 200px;
+    background-color: green;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}

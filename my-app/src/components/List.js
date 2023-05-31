@@ -1,17 +1,29 @@
 import { useState } from "react";
+import axios from 'axios';
 
 function Item(){
     const [Users, setState] = useState([])
+    const [Filttered, setData] = useState([])
 
     const getUsers = () =>{
-        fetch('https://randomuser.me/api/?results=20')
-        .then((res) => res.json())
-        .then((data) => {
-            setState(data.results)
+        axios.get('https://randomuser.me/api/?results=20')
+        .then((res)=>{
+            // console.log(res.data.results)
+            setState(res.data.results)
+            setData(res.data.results)
         })
         .catch(()=>{
-            console.log("error happens")
+            console.log("Error")
         })
+        // fetch('https://randomuser.me/api/?results=20')
+        // .then((res) => res.json())
+        // .then((data) => {
+        //     setState(data.results)
+        //     setData(data.results)
+        // })
+        // .catch(()=>{
+        //     console.log("error happens")
+        // })
     }
 
     return (
@@ -21,6 +33,27 @@ function Item(){
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore animi blanditiis aut eos recusandae consectetur, nulla unde repudiandae suscipit obcaecati itaque ratione nobis dicta eius, consequuntur, mollitia saepe vitae molestias!</p>
 
      <button onClick={getUsers}>Get User</button>
+     {Users.length>0 &&(
+        <div className="Radio">
+            <input type="radio" id="All" name="fav_language"  onChange={()=>{
+                setState(Filttered)
+
+            }}/>
+            <label for="All">All</label>
+            <br/>
+            <input type="radio" id="male" name="fav_language" onChange={()=>{
+                setState(Filttered.filter((data)=> data.gender === 'male'))
+
+            }} />
+            <label for='male' >Male</label>
+            <br/>
+            <input type="radio" id="female" name="fav_language" onChange={()=>{
+                setState(Filttered.filter((data)=> data.gender === 'female'))
+
+            }}/>
+            <label for='female'>Female</label>
+        </div>
+     )}
      {Users.length>0 && (
         <table width="100%" frame='box' rules="all">
             <thead>

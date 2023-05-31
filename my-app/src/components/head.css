@@ -57,6 +57,7 @@ button{
     background-color: aquamarine;
     border: none;
     border-radius: 15px;
+    margin: 25px;
 
 }
 .Image{
@@ -94,11 +95,12 @@ button{
     align-items: center;
     justify-content: space-evenly;
 }
-input{
-    border: none;
-    width: 80%;
-    height: 40px;
-    padding: 15px;
+.Radio{
+    padding: 25px;
+    margin-left: 25%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .complete{
