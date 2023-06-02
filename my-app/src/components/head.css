@@ -50,8 +50,8 @@ body{
     gap: 15px;
 }
 button{
-    height: 50px;
-    width: 120px;
+    height: 25px;
+    width: 80px;
     text-align: center;
     color: brown;
     background-color: aquamarine;
@@ -121,13 +121,14 @@ p{
 .Users{
     margin-left: 30%;
     margin-top: 25px;
-    width: 400px;
-    height: 400px;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: brown;
+    color: aliceblue;
 }
 .radionbtn{
     padding: 25px;
