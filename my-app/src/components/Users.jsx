@@ -74,7 +74,7 @@ function Users(){
                     <td>{user.name}</td>
                     <td>{user.gender}</td>
                     <td>
-                    <input type="text" name="" id="" onChange={(event)=>{
+                    <input type="text" name="" id="" placeholder='Enter city name' onChange={(event)=>{
                         setCity(event.target.value)
                     }} />
                     <button onClick={()=>{
