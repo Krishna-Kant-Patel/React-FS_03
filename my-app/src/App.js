@@ -5,8 +5,8 @@ import './App.css';
 // import Count from './components/count';
 // import Profile from './components/Profile';
 // import Inc from './components/Input';
-// import Item from './components/List';
-import Users from './components/Users';
+import Item from './components/List';
+// import Users from './components/Users';
 
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
       <Images/>
       <Count/>
       <Inc/> */}
-      {/* <Item/> */}
-      <Users/>
+      <Item/>
+      {/* <Users/> */}
     </div>
   );
 }
