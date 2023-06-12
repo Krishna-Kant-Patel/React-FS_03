@@ -6,9 +6,10 @@ import Nav from "./Components/Nav/Nav";
 // import Text from "./Components/TextComp/Text";
 // import A from "./Components/Context/A";
 // import Personal from "./Components/Profile/personal";
-import Home from "./Components/ContextProvider/Home";
-import Login from "./Components/ContextProvider/Login";
-import ContextApi from "./Components/ContextProvider/CustomContext";
+// import Home from "./Components/ContextProvider/Home";
+// import Login from "./Components/ContextProvider/Login";
+// import ContextApi from "./Components/ContextProvider/CustomContext";
+import Chakraui from "./Components/ChakraUI/ChakraUi";
 function App(props) {
   // const [showImage, setShowImage] = useState(false);
   // const [islogedin, setState] = useState(false);
@@ -19,12 +20,13 @@ function App(props) {
   // const logout =() =>{
   //   setState(false)
   // }
-  const {islogedin} = useContext(ContextApi)
+  // const {islogedin} = useContext(ContextApi)
 
   return (
     <div className="App">
       <Nav/>
-      {islogedin ? <Home /> : <Login />}
+      <Chakraui/>
+      {/* {islogedin ? <Home /> : <Login />} */}
       {/* <Personal/> */}
       {/* <A/> */}
       {/* <div style={{ margin: "50px auto" }}>
