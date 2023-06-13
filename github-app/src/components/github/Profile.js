@@ -1,23 +1,31 @@
 import { Box, Button, Heading } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext } from "react";
+import ContextApi from "./ContexAPI";
 
 function Profile(props) {
-  return (
-    <Box p="10px" textAlign="center">
+  const {usersdata} = useContext(ContextApi)
+  // console.log(usersdata)
+  return <>
+    {usersdata &&
+      <Box p="10px" textAlign="center">
       <img
-        src="https://media.istockphoto.com/id/1016761216/photo/portrait-concept.jpg?s=612x612&w=0&k=20&c=JsGhLiCeBZs7NeUY_3wjDlLfVkgDJcD9UCXeWobe7Ak="
+        src= {usersdata.avatar_url}
         height="200px"
       />
-      <Heading size="lg">Rajiv Sinha</Heading>
-      <p>Male</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia quis
-        sunt in, voluptates perferendis
+      <br/>
+      <Heading size="lg">{usersdata.name}</Heading>
+      <br/>
+      <p>Company Name: {usersdata.company}</p>
+      <br/>
+      <p> Bio: {usersdata.bio}
       </p>
+      <br></br>
 
-      <Button color="green">Profile</Button>
+      <Button color="green"><a href={usersdata.html_url}>Profile</a></Button>
     </Box>
-  );
+
+    }
+    </>
 }
 
 export default Profile;
