@@ -3,9 +3,8 @@ import {React, useContext} from "react";
 import ContextApi from "./ContexAPI";
 import axios from 'axios';
 
-function Search(props) {
+function Search() {
   const {setUsers} = useContext(ContextApi)
-  // const {usersdata} = useContext(ContextApi)
   function getUsersData(Data){
         axios.get(`https://api.github.com/users/${Data}`).then((res) => {
       // console.log(res);
@@ -27,7 +26,7 @@ function Search(props) {
       <Flex>
         <Input placeholder="Enter Github User Id" onChange={((event)=>{
                  nName = event.target.value
-               getUsersData(nName)
+               getUsersData(event.target.value)
               //  console.log(usersdata)
         })} />
         <Button variant="outline" onClick={(() => {

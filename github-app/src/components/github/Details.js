@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import {React, useContext} from "react";
 import ContextApi from "./ContexAPI";
 
@@ -6,7 +6,8 @@ function Details(props) {
   const {usersdata} = useContext(ContextApi)
   return <>
    {usersdata &&
-    <Box p="10px">User Details
+   
+    <Box bg = "green" fontWeight='semibold' p="10px">User Details
     <br/>
    
    <p>User ID: {usersdata.login}</p>

@@ -10,7 +10,7 @@ function Profile(props) {
       <Box p="10px" textAlign="center">
       <img
         src= {usersdata.avatar_url}
-        height="200px"
+        height={200}
       />
       <br/>
       <Heading size="lg">{usersdata.name}</Heading>
