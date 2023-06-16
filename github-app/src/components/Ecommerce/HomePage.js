@@ -1,6 +1,6 @@
 
 
-function Mainpage(){
+function Mainp(){
 
 
     return <>
@@ -10,4 +10,4 @@ function Mainpage(){
     </>
 }
 
-export default Mainpage;
+export default Mainp;

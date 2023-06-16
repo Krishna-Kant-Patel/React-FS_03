@@ -11,7 +11,7 @@ function Nav() {
         <Link to='/'>Home</Link>
         <Link to='product'>Product</Link>
         <Link to='about'>About</Link>
-        <Link to='contact'>ContactUs</Link>
+        <Link to='cart'>Cart</Link>
       </div>
     </div>
   );

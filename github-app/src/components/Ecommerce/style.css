@@ -1,0 +1,70 @@
+
+.Pcontainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.card{
+    height: 350px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 10px black;
+}
+img{
+    height: 45%;
+    width: 60%;
+}
+.cartcontainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.productimage{
+    padding: 10px;
+    width: 40%;
+    height: 400px;
+}
+.cart{
+    padding: 15px;
+    width: 80%;
+    height: 400px;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.productInfo{
+    padding: 10px;
+    width: 60%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: baseline;
+    /* justify-content: space-around; */
+}
+button{
+    height: 50px;
+    width: 120px;
+    border: none;
+    box-shadow: 4px 5px 8px red;
+    background-color: rgb(63,22,15);
+    color: whitesmoke;
+    font-weight: bold;
+}
+.checked {
+    color: orange;
+  }
