@@ -13,6 +13,7 @@ import Mainp from './components/Ecommerce/HomePage';
 import Productss from './components/Ecommerce/Products';
 import Cart from './components/Ecommerce/Cart';
 import { Route, Routes, Navigate } from 'react-router-dom';
+import Forms from './components/Form/Form';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='womenclothing'element={<WomenClothing/>} />
         </Route>
         <Route path="cart" element={ <Cart/> } />
+        <Route path="form" element={ <Forms/> } />
         {/* <Route path="about" element={ <About/> } /> */}
       </Routes>
     </div>
