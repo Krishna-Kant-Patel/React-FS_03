@@ -1,44 +1,149 @@
-import './style.css'
-import { useState } from 'react'
+import { useState } from "react";
+import {
+  Container,
+  Box,
+  Input,
+  Stack,
+  Radio,
+  RadioGroup,
+  Textarea,
+  Select,
+  Checkbox,
+  Button,
+  Center,
+} from "@chakra-ui/react";
 
+function Formc(props) {
+  const [state, setState] = useState({
+    username: "",
+    password: "",
+    gender: "",
+    city: "",
+    address: "",
+    techDetails: [],
+  });
 
-function Forms(){
-    const [data, setData] = useState({})
-
-    const updateData = e => {
-        setData({
-            ...data,
-            [e.target.name]: e.target.value
-        })
+  const handleForm = (event) => {
+    setState({
+      ...state,
+      [event.target.name]: event.target.value,
+    });
+  };
+  const handletechDetails = (event) => {
+    if (event.target.checked) {
+      setState({
+        ...state,
+        techDetails: [...state.techDetails, event.target.value],
+      });
+    } else {
+      var filteredData = state.techDetails.filter(
+        (ele) => ele !== event.target.value
+      );
+      setState({
+        ...state,
+        techDetails: filteredData,
+      });
     }
-
-    const submit = e => {
-        e.preventDefault()
-        console.log(data)
-    }
-
-
-    return <>
-    <form className="forms" onSubmit={submit}>
-        <label htmlFor="username" >User Name</label>
-        <input id='username'name='name' onChange={updateData} type="text" />
-        <label htmlFor="password">password</label>
-        <input id='password' name='password' onChange={updateData} type="password" placeholder="Enter Password" />
-       <div className="radios">
-       <input type="radio" name="gender" onChange={updateData} id="" value='Male' />Male
-        <input type="radio" name="gender" onChange={updateData} id=""value='female'/>Female
-        <input type="radio" name="gender" onChange={updateData} id="" value='Other' />other
-       </div>
-       <textarea name="textarea" name='Address' onChange={updateData} id="textbox" cols="30" rows="5">enter text</textarea>
-       <div className="check">
-        <input type="checkbox" name="skills" onChange={updateData} value="HTML"  id="" />Html
-        <input type="checkbox" name="skills" onChange={updateData} value="CSS" id="" />CSS
-        <input type="checkbox" name="skills" onChange={updateData} value="REACT" id="" />REACT
-       </div>
-
-        <button type="submit">Submit</button>
-    </form>
-    </>
+  };
+  const submitForm = () => {
+    console.log(state);
+    setState({
+      username: "",
+      password: "",
+      gender: "",
+      city: "",
+      address: "",
+      techDetails: [],
+    });
+  };
+  return (
+    <Container mt={5} boxShadow={"dark-lg"} p={5}>
+      <Box my={5}>
+        <Input
+          value={state.username}
+          name="username"
+          variant="outline"
+          placeholder="User Name"
+          onChange={handleForm}
+        />
+      </Box>
+      <Box my={5}>
+        <Input
+          name="password"
+          type="password"
+          variant="outline"
+          placeholder="Create Password"
+          onChange={handleForm}
+        />
+      </Box>
+      <Box my={5}>
+        <Center>
+          <RadioGroup>
+            <Stack direction="row">
+              <Radio name="gender" value="male" onChange={handleForm}>
+                Male
+              </Radio>
+              <Radio name="gender" value="female" onChange={handleForm}>
+                Female
+              </Radio>
+              <Radio name="gender" value="other" onChange={handleForm}>
+                Other
+              </Radio>
+            </Stack>
+          </RadioGroup>
+        </Center>
+      </Box>
+      <Box my={5}>
+        <Textarea name="address" placeholder="Add Your Detailed Address" />
+      </Box>
+      <Box my={5}>
+        <Select placeholder="Select option" name="city">
+          <option value="pune">Pune</option>
+          <option value="delhi">Delhi</option>
+          <option value="hyderabad">Hyderabad</option>
+        </Select>
+      </Box>
+      <Box my={5}>
+        <Center>
+          <Stack spacing={5} direction="row">
+            <Checkbox
+              value="html"
+              name="techDetails"
+              onChange={handletechDetails}
+            >
+              HTML
+            </Checkbox>
+            <Checkbox
+              value="css"
+              name="techDetails"
+              onChange={handletechDetails}
+            >
+              CSS
+            </Checkbox>
+            <Checkbox
+              value="javascript"
+              name="techDetails"
+              onChange={handletechDetails}
+            >
+              Javascript
+            </Checkbox>
+            <Checkbox
+              value="react"
+              name="techDetails"
+              onChange={handletechDetails}
+            >
+              React
+            </Checkbox>
+          </Stack>
+        </Center>
+      </Box>
+      <Box my={5}>
+        <Button colorScheme="blue" variant="outline" onClick={submitForm}>
+          Register / SignUp
+        </Button>
+      </Box>
+    </Container>
+  );
 }
 
-export default Forms
+export default Formc;

@@ -14,6 +14,7 @@ import Productss from './components/Ecommerce/Products';
 import Cart from './components/Ecommerce/Cart';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Forms from './components/Form/Form';
+import TodoApp from './components/TodoList/Todo';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         </Route>
         <Route path="cart" element={ <Cart/> } />
         <Route path="form" element={ <Forms/> } />
+        <Route path="todo" element={ <TodoApp/> } />
         {/* <Route path="about" element={ <About/> } /> */}
       </Routes>
     </div>

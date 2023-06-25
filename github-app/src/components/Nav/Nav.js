@@ -13,6 +13,7 @@ function Nav() {
         <Link to='about'>About</Link>
         <Link to='cart'>Cart</Link>
         <Link to='form'>Form</Link>
+        <Link to='todo'>Todo App</Link>
       </div>
     </div>
   );
