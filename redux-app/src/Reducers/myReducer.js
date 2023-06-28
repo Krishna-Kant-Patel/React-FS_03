@@ -1,18 +1,36 @@
 const initialData = {
-    comp1: "",
-    comp2: "",
+    user:""
+    
   };
   
-  const myReducer = (state = initialData, action) => {
+  const myReducer = (state = initialData , action) => {
     switch (
-      action.type //comp1
+      action.type 
     ) {
-      case "comp1":
+      case "users":
         state = {
           ...state,
-          comp1: action.payload,
+          user: action.payload,
         };
         break;
+      case "user":
+        state = {
+          ...state,
+          user: action.payload,
+        };
+        break;
+      // case "comp1":
+      //   state = {
+      //     ...state,
+      //     comp1: action.payload,
+      //   };
+      //   break;
+      // case "comp2":
+      //   state = {
+      //     ...state,
+      //     comp1: action.payload,
+      //   };
+      //   break;
     }
   
     return state;
