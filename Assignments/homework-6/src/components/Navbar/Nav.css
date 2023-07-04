@@ -1,0 +1,34 @@
+#main{
+    display: flex;
+    padding: 20px;
+    background-color: rgba(177, 177, 177, 0.835);
+    width: 100%;
+   margin: auto;
+   justify-content:space-between ;
+  
+}
+.menu{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#three{
+    display: flex;
+    font-size: 25px;
+    width: 10%;
+
+}
+#three div{
+    margin-left: 20px;
+}
+ a {
+    color: black;
+    font-size: large;
+    font-weight: 20%;
+    text-decoration: none;
+    margin-right: 20px;
+    justify-content: center;
+    margin-top: 40px;
+ }
