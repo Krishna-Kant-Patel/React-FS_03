@@ -7,30 +7,30 @@ const initialData = {
     switch (
       action.type 
     ) {
-      case "users":
-        state = {
-          ...state,
-          user: action.payload,
-        };
-        break;
-      case "user":
-        state = {
-          ...state,
-          user: action.payload,
-        };
-        break;
-      // case "comp1":
+      // case "users":
       //   state = {
       //     ...state,
-      //     comp1: action.payload,
+      //     user: action.payload,
       //   };
       //   break;
-      // case "comp2":
+      // case "user":
       //   state = {
       //     ...state,
-      //     comp1: action.payload,
+      //     user: action.payload,
       //   };
       //   break;
+      case "comp1":
+        state = {
+          ...state,
+          comp1: action.payload,
+        };
+        break;
+      case "comp2":
+        state = {
+          ...state,
+          comp2: action.payload,
+        };
+        break;
     }
   
     return state;

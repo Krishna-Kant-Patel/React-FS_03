@@ -2,7 +2,7 @@ import { useState } from "react";
 import myReduxStore from "../Store/Store";
 
 function Comp1(props) {
-  const [state, setState] = useState("");
+  const [state, setState] = useState();
 
   const submitData = () => {
     var myAction = {

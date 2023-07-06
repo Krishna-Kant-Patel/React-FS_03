@@ -1,5 +1,5 @@
 import React from "react";
-import { UseSelector } from "react-redux";
+import {useSelector } from "react-redux";
 function Result(props) {
   let Data = useSelector((store)=>{
     return store

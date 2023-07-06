@@ -2,7 +2,7 @@ import {useState} from "react";
 import myReduxStore from "../Store/Store";
 
 function Comp2(props) {
-    const [state, setState]
+    const [state, setState] = useState('')
     const submitdata = () => {
         var myAction = {
           type: "comp2",
