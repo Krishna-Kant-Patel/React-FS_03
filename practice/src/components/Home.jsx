@@ -1,44 +1,21 @@
-import { useRef, useReducer } from "react"
-
-function myReducer(state, action){
-
-    if(action.type==="inc"){
-        return (state ={
-            ...state,
-            count: state.count + action.paylaod,
-        })
-    }
-
-    
-
-}
+import {useState } from 'react'
 
 function Home(){
-    const [state, dispatch] = useReducer(myReducer, {count: 0});
+const [colors, SetColors] = useState('');
 
-    const refs = useRef();
-    const changeStyle= ()=>{
-        refs.current.style.color = 'red';
-        refs.current.innerText = "hello use ref"
+const [length, setLength] = useState('');
 
-    }
-   let col = 'yellow'
     return<>
-    <h1 style={{color:`${col}`}}>chnage color</h1>
-    <h2 ref={refs}>use ref</h2>
-    <button onClick={changeStyle} >Change Style</button>
-    <div style={{height:"300px",
-width:"300px", margin:"auto"}}>
-    <h1>{state.count}</h1>
-    <button onClick={(()=>{
-        dispatch({
-            type: "inc",
-            paylaod: 5,
-        })
-    })} >increase</button> &nbsp; &nbsp;
-    <button>decrease</button>&nbsp; &nbsp;
-    <button>reset</button>
-</div>
+    <div style={{height: "300px", width:"300px", margin:"auto" }}>
+        <select name="" onChange={((e)=> SetColors(e.target.value))} >
+            <option value="red">Red</option>
+            <option value="yellow">yellow</option>
+            <option value="blue">Blue</option>
+        </select>
+        <textarea style={{color:`${colors}`}} onChange = { ((e)=> setLength(e.target.value))} name="" id="" cols="30" rows="10">enter text</textarea>
+        <p>{length.length}</p>
+    </div>
     </>
 }
+
 export default Home;
